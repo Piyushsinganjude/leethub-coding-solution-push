@@ -71,18 +71,18 @@ struct Node
 // Deletes middle of linked list and returns head of the modified list
 Node* deleteMid(Node* head)
 {
-    Node * slow = head , *fast=head;
-    while(fast!=NULL && fast->next!=NULL)
-    {
-        slow = slow->next;
-        fast=fast->next->next;
-    }
-    if(slow->next==NULL)
-    {
-        head->next = NULL;
-        return head;
-    }
-    slow->data = slow->next->data;
-    slow->next=slow->next->next;
-    return head;
+ Node * fast = head , *slow = head;
+ while(fast!=NULL && fast->next!=NULL)
+ {
+     slow = slow->next;
+     fast = fast->next->next;
+ }
+ if(slow->next==NULL)
+ {
+     head->next=NULL;
+     return head;
+ }
+ slow->data= slow->next->data;
+ slow->next=slow->next->next;
+ return head;
 }
