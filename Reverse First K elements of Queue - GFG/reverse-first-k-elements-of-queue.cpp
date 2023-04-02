@@ -33,7 +33,7 @@ int main() {
 // Function to reverse first k elements of a queue.
 queue<int> modifyQueue(queue<int> q, int k) {
     queue<int> ans;
-    stack <int> st;
+    stack<int> st;
     
     while(k--){
         st.push(q.front());
