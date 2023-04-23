@@ -9,23 +9,23 @@ using namespace std;
 
 class Solution{
 public:
- string rem(string s){
-     string ans;
-     int n = s.size();
-     int i =0;
-     while(i<n){
-         if(i<n-1&&s[i]==s[i+1]){
-             while(i<n-1&&s[i]==s[i+1])
-             i++;
-         }
-         else{
-             ans.push_back(s[i]);
-             }
-             i++;
-     }
-     return ans;
- } 
-
+  string rem(string s){
+      string ans;
+      int i = 0;
+      int n = s.size();
+      while(i<n){
+          if(i<n-1&&s[i]==s[i+1]){
+              while(i<n-1&&s[i]==s[i+1])
+              i++;
+          }
+          else
+          {
+              ans.push_back(s[i]);
+          }
+          i++;
+      }
+      return ans;
+  }
 
 
 
