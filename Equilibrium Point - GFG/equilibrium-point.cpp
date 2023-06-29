@@ -11,16 +11,15 @@ class Solution{
     // n: size of array
     int equilibriumPoint(long long a[], int n) {
     
-        int pos = -1,leftSum = 0, rightSum=0;
-        
+        int pos = -1 , leftSum = 0, rightSum = 0;
         for(int i =0;i<n;i++)
         rightSum += a[i];
         
         for(int i =0;i<n;i++)
         {
             rightSum -= a[i];
-            if(leftSum == rightSum){
-                pos = i+1;
+            if(rightSum==leftSum){
+                pos =i+1;
                 break;
             }
             leftSum += a[i];
