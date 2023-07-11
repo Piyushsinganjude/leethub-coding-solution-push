@@ -12,18 +12,20 @@ using namespace std;
 class Solution{
   public:		
 	int lps(string s) {
-	int k = 0;
-        int l = 1;
-        for (int i = 1; i < s.size(); i++) {
-            if (s[k] == s[i]) {
-                k++;
-                continue;
-            }
-            i = l - 1;
-            l++;
-            k = 0;
-        }
-        return k;
+	    int k =0;
+	    int l = 1;
+	    for(int i =1;i<s.size();i++)
+	    {
+	        if(s[k]==s[i])
+	        {
+	            k++;
+	            continue;
+	        }
+	        i = l-1;
+	        l++;
+	        k=0;
+	    }
+	    return k;
 	}
 };
 
